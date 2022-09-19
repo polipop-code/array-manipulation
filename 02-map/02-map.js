@@ -20,3 +20,35 @@ function solution(array) {
 		};
 	});
 }
+
+// Map Reloaded
+const orders = [
+	{
+		customerName: "Nicolas",
+		total: 60,
+		delivered: true,
+	},
+	{
+		customerName: "Zulema",
+		total: 120,
+		delivered: false,
+	},
+	{
+		customerName: "Santiago",
+		total: 180,
+		delivered: true,
+	},
+	{
+		customerName: "Valentina",
+		total: 240,
+		delivered: true,
+	},
+];
+
+const totalOrders = orders.map((item) => item.total);
+console.log(totalOrders);
+
+// Add taxes
+const taxes = orders.map((item) => {
+	item.tax = 0.19;
+});

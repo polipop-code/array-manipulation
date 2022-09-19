@@ -8,10 +8,11 @@
 	</head>
 	<body>
 		<div id="app"></div>
+		<!-- 
 		<script>
 			const products = [
 				{
-					title: "hamburger",
+					title: "Hamburger",
 					price: "$2",
 				},
 				{
@@ -21,9 +22,42 @@
 			];
 
 			const app = document.getElementById("app");
+            
 			products.forEach((product) => {
 				app.innerHTML += `
                 <li>${product.title} - ${product.price}</li>
+                `;
+			});
+		</script>
+         -->
+
+		<!-- Tasklist with forEach -->
+		<script>
+			const tasklist = [
+				{
+					taskTitle: "Do the bed",
+					done: true,
+				},
+				{
+					taskTitle: "Brush my teeth",
+					done: false,
+				},
+				{
+					taskTitle: "Prepare the breakfast",
+					done: true,
+				},
+				{
+					taskTitle: "Study",
+					done: false,
+				},
+			];
+
+			const app = document.getElementById("app");
+
+			tasklist.forEach((element) => {
+				app.innerHTML += `
+                <li>${element.taskTitle} </li>
+                <input type='checkbox' ${element.done ? "checked" : ""}></input>
                 `;
 			});
 		</script>

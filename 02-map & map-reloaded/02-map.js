@@ -59,3 +59,14 @@ const taxes = orders.map((item) => {
 
 console.log(orders);
 console.log(taxes);
+
+// Deliveed orders, with filter
+const delivered = orders.filter((item) => item.delivered && item.total >= 100);
+console.log(delivered);
+
+// Searcher
+const search = (query) => {
+	return orders.filter((item) => item.customerName.includes(query));
+};
+
+console.log(search("Nico"));

@@ -45,10 +45,17 @@ const orders = [
 	},
 ];
 
+// Get a single element from an objects array
 const totalOrders = orders.map((item) => item.total);
 console.log(totalOrders);
 
-// Add taxes
+// Add an extra element to an objects aray, add taxes
 const taxes = orders.map((item) => {
-	item.tax = 0.19;
+	return {
+		...item,
+		tax: item.total * 0.19,
+	};
 });
+
+console.log(orders);
+console.log(taxes);

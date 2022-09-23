@@ -92,3 +92,19 @@ const calendars = {
 const challengeSolution = Object.values(calendars).flat();
 const challengeMap = challengeSolution.map((object) => object.startDate);
 console.log(challengeMap);
+
+// Challenge
+
+function solution(lines) {
+	// Tu código aquí 👈
+	let result = lines.join(" ").split(" ").length;
+	console.log(result);
+	return result;
+}
+
+solution([
+	"Beautiful is better than ugly",
+	"Explicit is better than implicit",
+	"Simple is better than complex",
+	"Complex is better than complicated",
+]);

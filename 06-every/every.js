@@ -1,5 +1,3 @@
-// Every
-
 // Clasic
 const numbers = [1, 30, 41, 29, 10, 13];
 

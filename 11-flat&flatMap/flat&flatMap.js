@@ -45,3 +45,50 @@ console.log(
 	"niveles infinitos",
 	result4 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 );
+
+// FlatMap clasic
+const users = [
+	{ userId: 1, username: "Tom", attributes: ["Nice", "Cute"] },
+	{ userId: 2, username: "Mike", attributes: ["Lovely"] },
+	{ userId: 3, username: "Nico", attributes: ["Nice", "Cool"] },
+];
+
+const response = users.map((user) => user.attributes).flat();
+console.log(response);
+
+// Only flatMap
+const flatMap = users.flatMap((user) => user.attributes);
+console.log(flatMap);
+
+// Challenge
+const calendars = {
+	primaryCalendar: [
+		{
+			startDate: new Date(2021, 1, 1, 15),
+			endDate: new Date(2021, 1, 1, 15, 30),
+			title: "Cita 1",
+		},
+		{
+			startDate: new Date(2021, 1, 1, 17),
+			endDate: new Date(2021, 1, 1, 18),
+			title: "Cita 2",
+		},
+	],
+	secondaryCalendar: [
+		{
+			startDate: new Date(2021, 1, 1, 12),
+			endDate: new Date(2021, 1, 1, 12, 30),
+			title: "Cita 2",
+		},
+		{
+			startDate: new Date(2021, 1, 1, 9),
+			endDate: new Date(2021, 1, 1, 10),
+			title: "Cita 4",
+		},
+	],
+};
+
+// Solution
+const challengeSolution = Object.values(calendars).flat();
+const challengeMap = challengeSolution.map((object) => object.startDate);
+console.log(challengeMap);
